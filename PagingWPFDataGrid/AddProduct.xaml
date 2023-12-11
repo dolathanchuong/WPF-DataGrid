@@ -1,0 +1,57 @@
+﻿<Window x:Class="PagingWPFDataGrid.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PagingWPFDataGrid"
+        mc:Ignorable="d"
+        Title="AddProduct" Height="489" Width="303" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+         Loaded="LoadDonViTinh"
+        >
+    <Grid Margin="5">
+        <StackPanel>
+            <Label FontWeight="Bold">Unit (*):</Label>
+            <ComboBox x:Name="cbUnit" Width="280" HorizontalAlignment="Left" SelectedIndex="0">
+            </ComboBox>
+            <Label FontWeight="Bold">ProductType (*):</Label>
+            <ComboBox x:Name="cbProductType" Width="280" HorizontalAlignment="Left" SelectedIndex="0">
+            </ComboBox>
+            <Label FontWeight="Bold">Create Date:</Label>
+            <DatePicker Width="280" HorizontalAlignment="Left" x:Name="dtpCreateDate"/>
+
+            <Label FontWeight="Bold">Product Name (*):</Label>
+            <TextBox x:Name="txtProductName" Width="280" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Input ProductName"/>
+            <Label FontWeight="Bold">Quantity In Stock (*):</Label>
+            <TextBox x:Name="txtQuantityInStock" Width="280" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Input QuantityInStock"/>
+            <Label FontWeight="Bold">Price Single (*):</Label>
+            <TextBox x:Name="txtPriceSingle" Width="280" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Input Price Single"/>
+            <Label FontWeight="Bold">DescripTions:</Label>
+            <TextBox x:Name="txtDescripTions" Width="280" HorizontalAlignment="Left"  materialDesign:HintAssist.Hint="Input DescripTions" />
+            <Label FontWeight="Bold">Sell Status (*):</Label>
+            <ComboBox x:Name="cbIsActive" Width="280" HorizontalAlignment="Left" SelectedIndex="0">
+            </ComboBox>
+            <Grid Margin="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Button  Width="100" Click="btnAddProduct">
+                        Add
+                    </Button>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Button  Width="100" Click="btnCancelProduct">
+                        Cancel
+                    </Button>
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
